@@ -4,11 +4,25 @@
   "description": "Casa do Código - Venda de Livro",
   "main": "cdc.js",
   "scripts": {
+    "start": "node cdc.js",
+    "dev": "./node_modules/.bin/nodemon cdc.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Caio Santos",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^2.5.7",
     "express": "^4.16.2"
-  }
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caio687/CDC-Clone.git"
+  },
+  "bugs": {
+    "url": "https://github.com/caio687/CDC-Clone/issues"
+  },
+  "homepage": "https://github.com/caio687/CDC-Clone#readme"
 }
