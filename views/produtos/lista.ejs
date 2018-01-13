@@ -1,23 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>produtos</h1>
-    <ul>
+<% include ../includes/header.ejs %>
 
-        <!-- 
-            Uma forma de percorrer array com "for" no ES6 é com "of" conforme exemplo
-            abaixo, da para usar o "in" mas com "in" ele pega o indice do array não o valor
-        -->
-        <% for(let produto of produtos) {%>
-            <li> <%=produto%> </li>
-         <% } %> 
-    </ul>
+    <div>
+        <div class ="container min-container">
+           <h2 class="basic-title">Listagem de Livros</h2>
 
-</body>
-</html>
+           <table class="table table-condensed table-bordered table-striped table-hover">
+                <thead>
+                    <tr>
+                        <td>Titulo</td>
+                        <td>Preço</td>
+                        <td>Descrição</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Forma enchuta de fazer o for para percorrer array -->
+                    <% for(let produto of produtos) { %>
+                        <tr>
+                            <td><a><%=produto.titulo%></a></td>
+                            <td><%=produto.preco%></td>
+                            <td><%=produto.descricao%></td>
+                        </tr>
+                        <% } %>
+                </tbody>
+           </table>
+          
+           
+           <a href="/produtos/cadastro" class="btn btn-success"><span class="glyphicon glyphicon-plus-sign"></span> Novo livro</a>
+        </div>
+    </div>
+
+<% include ../includes/footer.ejs %>
